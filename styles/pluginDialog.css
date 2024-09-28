@@ -48,7 +48,7 @@ body {
     border: none;
     transition: background-color 0.3s ease;
     font-family: Jura;
-
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* Style for disabled button */

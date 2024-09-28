@@ -13,8 +13,8 @@ async function redirectToUrl() {
             })
             .then(data => {
 
-                data.siteSecurityCheck = 90;
-                document.getElementById('toggle-btn').innerText = `SiteCheck :${data.siteSecurityCheck} %`;
+                data.siteSecurityCheck = 40;
+                document.getElementById('toggle-btn').innerText = `SiteCheck: ${data.siteSecurityCheck} %`;
 
                 if (data.siteSecurityCheck < 50)
                     document.getElementById('toggle-btn').classList.add("bad");
