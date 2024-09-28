@@ -12,7 +12,16 @@ async function redirectToUrl() {
                 return response.json();
             })
             .then(data => {
-                document.getElementById('output-info').innerText = data.fact;
+                document.getElementById('toggle-btn').innerText = `SiteCheck :${data.siteSecurityCheck} %`;
+
+                if (data.siteSecurityCheck < 50)
+                    document.getElementById('toggle-btn').classList.add("bad");
+                else if (data.siteSecurityCheck > 50 && data.siteSecurityCheck < 75) {
+                    document.getElementById('toggle-btn').classList.add("warn");
+                }
+                else if (data.siteSecurityCheck > 75)
+                    document.getElementById('toggle-btn').classList.add("ok");
+
             })
             .catch(error => {
                 console.error('There has been a problem with your fetch operation:', error);
