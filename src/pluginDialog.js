@@ -13,7 +13,7 @@ async function redirectToUrl() {
             })
             .then(data => {
 
-                data.siteSecurityCheck = 40;
+                data.siteSecurityCheck = 98;
                 document.getElementById('toggle-btn').innerText = `SiteCheck: ${data.siteSecurityCheck} %`;
 
                 if (data.siteSecurityCheck < 50)
