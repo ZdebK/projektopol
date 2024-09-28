@@ -1,6 +1,11 @@
-.dialog-box {
+body {
     background-color: #292d3e;
     color: #ffffff;
+    font-family: 'Jura'
+}
+
+.dialog-box {
+
     min-height: 200px;
     min-width: 300px;
     padding: 2rem;
@@ -11,6 +16,8 @@
 }
 
 .toggle-dialog-btn {
+    background: linear-gradient(180deg, #0A109A 0%, #010A3B 100%);
+    color: white;
     position: fixed;
     top: 20px;
     right: 20px;
@@ -19,6 +26,7 @@
 
 .clickable {
     background-color: #4CAF50;
+    border-radius: 10px;
     /* Green */
     color: white;
     padding: 15px 32px;
@@ -27,6 +35,8 @@
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease;
+    font-family: Jura;
+
 }
 
 /* Style for disabled button */
