@@ -1,0 +1,39 @@
+{
+    "name": "projektopol",
+    "description": "GitLab Helper",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": [
+                "*"
+            ],
+            "js": [
+                "run.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "scripting"
+    ],
+    "action": {
+        "default_title": "GitLab Helper",
+        "default_popup": "dialog.html",
+        "default_icon": {
+            "16": "/icons/16x.png",
+            "32": "/icons/32x.png",
+            "48": "/icons/48x.png",
+            "128": "/icons/128x.png"
+        }
+    },
+    "icons": {
+        "16": "/icons/16x.png",
+        "32": "/icons/32x.png",
+        "48": "/icons/48x.png",
+        "128": "/icons/128x.png"
+    }
+}
