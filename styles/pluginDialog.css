@@ -24,6 +24,18 @@ body {
     background-color: #28a745;
 }
 
+.warn {
+    background: linear-gradient(180deg, #9a500a 0%, #010A3B 100%);
+}
+
+.bad {
+    background: linear-gradient(180deg, #9a0a0a 0%, #010A3B 100%);
+}
+
+.ok {
+    background: linear-gradient(180deg, #0a9a0f 0%, #010A3B 100%);
+}
+
 .clickable {
     background-color: #4CAF50;
     border-radius: 10px;

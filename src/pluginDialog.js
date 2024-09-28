@@ -12,6 +12,8 @@ async function redirectToUrl() {
                 return response.json();
             })
             .then(data => {
+
+                data.siteSecurityCheck = 90;
                 document.getElementById('toggle-btn').innerText = `SiteCheck :${data.siteSecurityCheck} %`;
 
                 if (data.siteSecurityCheck < 50)
