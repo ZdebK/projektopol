@@ -1,49 +1,17 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    height: 100vh;
+.dialog-box {
+    background-color: #292d3e;
+    color: #ffffff;
+    min-height: 200px;
+    min-width: 300px;
+    padding: 2rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 
-/* Transparent Dialog Box */
-#plugin-dialog {
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Transparent */
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    display: none;
-    /* Hidden by default */
-}
 
-/* Dialog Header */
-#plugin-dialog h2 {
-    margin-top: 0;
-    font-size: 18px;
-}
-
-/* Button Styles */
-button {
-    padding: 10px 15px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Toggle Button */
 .toggle-dialog-btn {
     position: fixed;
     top: 20px;
@@ -51,6 +19,22 @@ button:hover {
     background-color: #28a745;
 }
 
-.toggle-dialog-btn.close {
-    background-color: #dc3545;
+.clickable {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Style for disabled button */
+.disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    pointer-events: none;
+    /* Disables click */
 }
