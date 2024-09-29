@@ -1,7 +1,7 @@
 import https from "https";
 
 export function check(site) {
-    let maximumScore = 100;
+    let score = 100;
 
 
     if (!site) {
@@ -12,8 +12,8 @@ export function check(site) {
     }
     let url = new URL(site);
 
-    if (url.protocol !== "https") {
-        maximumScore -= 10
+    if (url.protocol !== "https:") {
+        score -= 10;
     }
 
 
@@ -43,7 +43,10 @@ export function check(site) {
 
     // if(dataDomain[0].creation_date.toJsDate())
 
-    return maximumScore;
+    return {
+        statusCode: 200,
+        body: JSON.stringify({score}),
+    };
 }
 
 let result = check("http://localhost");

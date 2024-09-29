@@ -10,4 +10,14 @@ elo
 
 To test locally, run:
 
-`node check.js`
+```
+npm i
+node check.js
+```
+
+## Tool versions
+
+Recommended tool versions:
+
+- `node` `v20.17.0`
+- `npm` `10.8.3`
