@@ -1,8 +1,13 @@
-import { check } from "./check";
+import { check } from "./check.mjs";
 
-exports.handler = async (event) => {
+export const handler = async (event) => {
     
+    let body = JSON.parse(event.body);
+    console.log(body)
     // Extract the URL from the event input
-    const url = event.url;
+    const url = body.url;
+    
+    // if(dataDomain[0].creation_date.toJsDate())
+    
     return await check(url);
 };

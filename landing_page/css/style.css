@@ -1,0 +1,257 @@
+body {
+    background: linear-gradient(#0A109A, #010A3B);
+    background-attachment: fixed;
+    color: #FFFFFF;
+    font-family: "Jura", sans-serif;
+}
+
+header {
+    background: #020B3E;
+    /* maybe position:sticky */
+}
+
+h1 {
+    margin:0;
+    font-weight: 500;
+    font-size: 98px;
+}
+
+.statistics {
+    position: relative;
+    margin-top: 360px;
+}
+
+.statistics, .statistics-box, .statistics::after {
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+.statistics::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.statistics-box {
+    font-size: 22px;
+    float: left;
+    width: 33.33%;
+    padding:90px;
+    font-weight: 50;
+}
+
+.statistics-number {
+    font-size: 66px;
+}
+
+h3 {
+    margin:0;
+    position: absolute;
+    right: 0;
+    bottom: 68px;
+    font-weight: 100;
+}
+
+ul {
+    margin:0;
+}
+
+footer {
+    color: grey;
+    font-family: "Courier New", Courier, monospace;
+    padding: 12px;
+}
+
+h2 {
+    padding: 10px;
+    padding-bottom: 15px;
+}
+
+h2 a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+h1, .search-result, .about-header, .mission-header, .contact-header {
+    clear: right;
+}
+
+.search-result {
+    text-align: center;
+}
+
+.search {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    width: 100px;
+    height: 100px;
+}
+
+.main-nav {
+    float:right;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+
+.main-nav li {
+    float:left;
+    list-style-type: none;
+}
+.main-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 5px;
+    margin-right: 13px;
+    margin-top: 10px;
+}
+
+.title {
+    position:relative;
+    width: 465px;
+    height: 194px;
+}
+
+.title-box {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    margin-top: -150px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+}
+
+.address-security-text, .domain-info-text, .payment-provider-text {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 400;
+}
+
+.address-security-header, .domain-info-header, .payment-provider-header {
+    font-size: 25px;
+    color: #040CC3;
+    padding: 10px;
+}
+
+.result-description {
+    padding: 10px;
+    text-align: center;
+}
+
+.result-score, .about-header, .mission-header, .contact-header {
+    font-size: 40px;
+}
+
+.result-score {
+    margin-bottom:10px;
+    text-align: center;
+}
+
+.result-box {
+    padding: 30px;
+}
+
+.score {
+    font-size: 55px;
+}
+
+.about-box, .mission-box, .contact-box {
+    padding: 169px;
+    margin-right: 300px;
+}
+
+.contact-box {
+    margin-bottom:150px;
+}
+
+p {
+    font-size: 18px;
+    letter-spacing: 0px;
+}
+
+.report-text {
+    font-size: 15px;
+    color: #000000;  
+    margin-left: 10px; 
+    margin-bottom: 40px;
+    margin-right: 270px;
+}
+
+.address-security, .domain-info, .payment-provider {
+    background: #D9D9D9;
+    padding: 10px;
+    margin-bottom: 25px;
+    position: relative;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+.report-image {
+    position: absolute;
+    right: -70px;
+    top: 26px;
+}
+
+.report-image img {
+    width:50%;
+}
+
+.search-result input {
+    width: 60%;
+    padding: 13px;
+    background: #D9D9D9;
+}
+
+.search input {
+    width: 340px;
+    padding: 7px;
+    border-radius: 12px;
+}
+
+.contact-header {
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    margin-left: 197px;
+}
+
+.form-text {
+    font-size: 15px;
+}
+
+.contaxt-box {
+    position: relative;
+}
+
+.contact-form {
+    position: absolute;
+    top:350px;
+    margin-top: 25px;
+}
+
+.form-input, .form-input-message {
+    background-color: #d9d9d997;
+    width:500px;
+    border-radius: 8px;
+    padding:5px;
+    margin-top: 6px;
+    margin-bottom:6px;
+}
+
+.contact-form button {
+    width:100%;
+    border-radius: 8px;
+    padding:5px;
+    margin-top:20px;
+    color: #FFFFFF;
+    background-color: rgb(57, 57, 57);
+    border-style: none;
+}
+
+.form-input-message {
+    height: 40px;
+}
