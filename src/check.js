@@ -1,14 +1,13 @@
 export async function check(site) {
     let score = 100;
 
-
     if (!site) {
         return {
             statusCode: 400,
             body: JSON.stringify({message: 'Error: No URL provided'}),
         };
     }
-    let url = new URL(site);
+    const url = new URL(site);
 
     if (url.protocol !== "https:") {
         score -= 10;
@@ -19,7 +18,7 @@ export async function check(site) {
         checkDomainUrl = 'https://api.api-ninjas.com/v1/whois?domain=' + domain;
 
     const response = await fetch(checkDomainUrl,
-        {headers: {"X-Api-Key": "YOUR_KEY"}}
+        {headers: {"X-Api-Key": "lds1zqvPfESylByVUx1Mgg==zrvQLMGBixSX0S7k"}}
         )
     if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
