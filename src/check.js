@@ -1,6 +1,4 @@
-import https from "https";
-
-export function check(site) {
+export async function check(site) {
     let score = 100;
 
 
@@ -16,32 +14,23 @@ export function check(site) {
         score -= 10;
     }
 
-
     const
         domain = url.hostname,
-        checkDomainUrl = 'https://api.api-ninjas.com/v1/whois?domain=' + domain,
-        dataDomain = [];
+        checkDomainUrl = 'https://api.api-ninjas.com/v1/whois?domain=' + domain;
 
+    const response = await fetch(checkDomainUrl,
+        {headers: {"X-Api-Key": "YOUR_KEY"}}
+        )
+    if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+    }
+    const whoisResponse = await response.json();
+    const yearAgoTimestamp = new Date(new Date().setFullYear(new Date().getFullYear() - 1)).valueOf() / 1000;
+    const creationDate = whoisResponse.creation_date[0] || whoisResponse.creation_date;
 
-    const checkCreatedDate = new Promise((resolve, reject) => {
-        https.get(checkDomainUrl, (response) => {
-            let data = '';
-
-
-            // Accumulate data chunks
-            response.on('data', (chunk) => {
-                data += chunk;
-            });
-
-            // Handle the end of the response
-            response.on('end', () => {
-                dataDomain.push(JSON.parse(data))
-            });
-        })
-    });
-
-
-    // if(dataDomain[0].creation_date.toJsDate())
+    if (creationDate > yearAgoTimestamp) {
+        score -= 30;
+    }
 
     return {
         statusCode: 200,
@@ -49,5 +38,5 @@ export function check(site) {
     };
 }
 
-let result = check("http://localhost");
+let result = await check("https://google.com/");
 console.log(result)
