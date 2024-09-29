@@ -1,10 +1,12 @@
+/* global fetch */
+
 export async function check(site) {
     let score = 100;
 
     if (!site) {
         return {
             statusCode: 400,
-            body: JSON.stringify({message: 'Error: No URL provided'}),
+            body: {message: 'Error: No URL provided', site},
         };
     }
     const url = new URL(site);
@@ -33,9 +35,9 @@ export async function check(site) {
 
     return {
         statusCode: 200,
-        body: JSON.stringify({score}),
+        body: {score, site},
     };
 }
 
-let result = await check("https://google.com/");
-console.log(result)
+// let result = await check("https://google.com/");
+// console.log(result)
