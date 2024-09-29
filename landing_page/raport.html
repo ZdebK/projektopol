@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>SiteScan - your fraud monitor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <ul>
+              <li>
+                <a href="about.html">About project</a>
+              </li>
+              <li>
+                <a href="mission.html">Our mission</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <h2><a href="index.html"
+            >SiteScan</a></h2>
+    </header>
+    <div class="search-result">
+        <div>
+        <form id="form" class="result-search-form"> 
+            <input type="search" id="query" name="q" placeholder="Search...">
+        </form>
+        </div>
+    </div>
+    <div class="report-box">
+        <div class="result-box">
+            <div class="result-score">
+                Overall safety score: <span class="score">65%</span>
+            </div>
+            <div class="result-description">
+                This website doesn’t look fully secure - several of our checks failed. See below for more information. 
+            </div>
+        </div>
+        <div class="result-components">
+
+           
+            <div class="address-security">
+                <div class="address-security-text">
+                    <div class="address-security-header">
+                        Address security
+                    </div> 
+                    <div class="report-image">
+                    <img src="css/images/cross.png">
+                    </div>
+                    <div class="report-text">
+                        This address is not secure. <br> Be careful!
+                    </div>
+                </div>
+            </div>
+            <div class="domain-info">
+                <div class="address-security-text">
+                    <div class="domain-info-header">
+                        Domain info
+                    </div>
+                    <div class="report-image">
+                        <img src="css/images/alert.png">
+                    </div>
+                    <div class="report-text">
+                        Watch out! This domain was created just 30 days ago. Double check other details of the merchant before making any transaction. 
+                 </div>
+                </div>
+            </div>
+            <div class="payment-provider">
+                <div class="payment-provider-text">
+                    <div class="payment-provider-header">
+                        Payment provider
+                    </div>
+                    <div class="report-image">
+                        <img src="css/images/check.png">
+                    </div>
+                    <div class="report-text"> 
+                        The payment processor used on this website seems to be trustworthy - it is one of the major e-money companies. 
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <footer>2024 SiteScan</footer>
+</body>
+</html>
